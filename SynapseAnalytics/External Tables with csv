@@ -21,6 +21,8 @@ WITH (    LOCATION   = 'https://appdatalake7000.dfs.core.windows.net/data',
           CREDENTIAL = SasToken
 )
 
+//---------------------------------https://<storage-account.dfs.core.windows.net/<container-name>   
+
 /* This creates an External File Format object that defines the external data that can be 
 present in Hadoop, Azure Blob storage or Azure Data Lake Store
 
@@ -38,16 +40,16 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
 CREATE EXTERNAL TABLE [logdata]
 (
     [Id] [int] NULL,
-	[Correlationid] [varchar](200) NULL,
-	[Operationname] [varchar](200) NULL,
-	[Status] [varchar](100) NULL,
-	[Eventcategory] [varchar](100) NULL,
-	[Level] [varchar](100) NULL,
-	[Time] [datetime] NULL,
-	[Subscription] [varchar](200) NULL,
-	[Eventinitiatedby] [varchar](1000) NULL,
-	[Resourcetype] [varchar](1000) NULL,
-	[Resourcegroup] [varchar](1000) NULL)
+	[Correlationid] [varchar](200) ,
+	[Operationname] [varchar](200) ,
+	[Status] [varchar](100) ,
+	[Eventcategory] [varchar](100) ,
+	[Level] [varchar](100) ,
+	[Time] [datetime] ,
+	[Subscription] [varchar](200) ,
+	[Eventinitiatedby] [varchar](1000) ,
+	[Resourcetype] [varchar](1000) ,
+	[Resourcegroup] [varchar](1000) )
 WITH (
  LOCATION = '/Log.csv',
     DATA_SOURCE = log_data,  
