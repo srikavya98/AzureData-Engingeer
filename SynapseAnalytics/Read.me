@@ -1,0 +1,19 @@
+The data(csv file) is stored in storageaccount - datalakes (containes)
+All the commands are done synapse studios
+[Shared access signature]:
+  - allowed services: check blob
+  - allowerd resorce types: check everything
+  - allowed permissions: check read and list
+  - blob versioning permission:uncheck that permission
+  Now click on Generate SAS and connection string
+  Now copy the sas token
+  
+The following changes need to be done before running the commands
+  
+  - Change the database to appdb before running 9th line
+  - Change the sastoken in 15th line (you can find it if you go to storage account, in left pannel you can find Shared access signature, set the setting mentioned above line 3) 
+  - Change the storage account name in line 20th according to one you created
+  - Check the line 52 - change it to where the data is avaiable
+  - line 58 [Optional]
+  
+
